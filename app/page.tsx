@@ -3,13 +3,11 @@ import BrandGrid from "@/components/BrandGrid";
 import MetricsSection from "@/components/MetricsSection";
 import VideoShowcase from "@/components/VideoShowcase";
 import AnimatedSection from "@/components/AnimatedSection";
-import CaseStudyCard from "@/components/CaseStudyCard";
+import PortfolioGrid from "@/components/PortfolioGrid";
 import Link from "next/link";
-import { caseStudies, services } from "@/lib/data";
+import { services } from "@/lib/data";
 
 export default function Home() {
-  const featuredStudies = caseStudies.filter((s) => s.featured).slice(0, 3);
-
   return (
     <>
       {/* 1. Hero */}
@@ -21,7 +19,7 @@ export default function Home() {
       {/* 3. Metrics */}
       <MetricsSection />
 
-      {/* 4. Case Studies Preview */}
+      {/* 4. Portfolio Preview */}
       <section className="py-24 lg:py-40 border-t border-[#1e1e1e]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <AnimatedSection className="flex items-end justify-between mb-16 gap-8 flex-wrap">
@@ -32,29 +30,19 @@ export default function Home() {
               </div>
               <h2 className="font-display text-[clamp(2.5rem,5vw,5rem)] font-light text-[#f0ece4] leading-tight tracking-[-0.02em]">
                 Selected <br />
-                <span className="gradient-accent">Case Studies</span>
+                <span className="gradient-accent">Portfolio</span>
               </h2>
             </div>
             <Link
-              href="/case-studies"
+              href="/portfolio"
               className="group flex items-center gap-3 text-[#6b6b6b] hover:text-[#c9a96e] transition-colors text-sm tracking-[0.15em] uppercase"
             >
-              All Cases
+              View All
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#1e1e1e]">
-            {featuredStudies.map((study, i) => (
-              <div key={study.slug} className={i === 0 ? "lg:col-span-2" : ""}>
-                <CaseStudyCard
-                  study={study}
-                  index={i}
-                  variant={i === 0 ? "large" : "default"}
-                />
-              </div>
-            ))}
-          </div>
+          <PortfolioGrid preview />
         </div>
       </section>
 
@@ -67,7 +55,7 @@ export default function Home() {
               <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase">What I Do</span>
             </div>
             <h2 className="font-display text-[clamp(2.5rem,5vw,5rem)] font-light text-[#f0ece4] leading-tight tracking-[-0.02em] max-w-2xl">
-              Services built for <span className="gradient-accent">real results</span>
+              Skills built for <span className="gradient-accent">real results</span>
             </h2>
           </AnimatedSection>
 
@@ -104,7 +92,7 @@ export default function Home() {
               href="/services"
               className="inline-flex items-center gap-3 text-[#6b6b6b] hover:text-[#c9a96e] transition-colors text-sm tracking-[0.2em] uppercase"
             >
-              View All Services
+              View All Skills
               <span>→</span>
             </Link>
           </AnimatedSection>

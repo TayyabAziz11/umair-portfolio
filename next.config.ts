@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Keep Cloudinary SDK on the server — it uses Node.js `fs` and can't run in the browser
+  serverExternalPackages: ["cloudinary"],
   images: {
     remotePatterns: [
       {

@@ -3,54 +3,59 @@
 import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 
+const CL = "https://res.cloudinary.com/dgsjtycgd/image/upload/f_auto,q_auto,w_300";
+
 const row1 = [
-  { src: "/espresso-logo.avif",           alt: "Espresso" },
-  { src: "/chatterbox-logo.png",          alt: "Chatterbox" },
-  { src: "/Coach_lgo.webp",               alt: "Coach" },
-  { src: "/Klay-logo.png",                alt: "Klay" },
-  { src: "/AFM-logo.jpg.jpeg",            alt: "AFM" },
-  { src: "/dephli-logo.png",              alt: "Delphi" },
-  { src: "/canvas-galley-logo.jpg",       alt: "Canvas Gallery" },
-  { src: "/Dr.Seema-Logo.png",            alt: "Dr Seema" },
-  { src: "/shahidafridi-store-logo.webp", alt: "Shahid Afridi" },
-  { src: "/stylo-logo.png",               alt: "Stylo" },
+  { src: "/espresso-logo.avif",                              alt: "Espresso" },
+  { src: `${CL}/Chatterbox-logo_ewtj0v`,                    alt: "Chatterbox" },
+  { src: `${CL}/coach-logo_ojteie`,                         alt: "Coach" },
+  { src: `${CL}/klay-logo_o1p3mw`,                          alt: "Klay" },
+  { src: `${CL}/afm-logo_eqsykw`,                           alt: "AFM" },
+  { src: `${CL}/Delphi-logo_kabldy`,                        alt: "Delphi" },
+  { src: "/canvas-galley-logo.jpg",                          alt: "Canvas Gallery" },
+  { src: `${CL}/Dr.SeemaSH-logo_bplthx`,                    alt: "Dr Seema" },
+  { src: "/shahidafridi-store-logo.webp",                    alt: "Shahid Afridi" },
+  { src: `${CL}/Stylo-logo_gc3tym`,                         alt: "Stylo" },
 ];
 
 const row2 = [
-  { src: "/dawn-logo.png",                alt: "Dawn" },
-  { src: "/Abbott-logo.png",              alt: "Abbott" },
-  { src: "/adamjee-logo.svg",             alt: "Adamjee" },
-  { src: "/searle-logo-1.png",            alt: "Searle" },
-  { src: "/rizwanbeyg-logo.avif",         alt: "Rizwan Beyg" },
-  { src: "/fashion-logo.png",             alt: "Fashion" },
-  { src: "/kcci-logo.jpg",                alt: "KCCI" },
-  { src: "/LuckyFoods-Logo.svg",          alt: "Lucky Foods" },
-  { src: "/princess-polly-logo.svg",      alt: "Princess Polly" },
-  { src: "/images-logo.jpg",              alt: "Images" },
+  { src: `${CL}/dawn-logo_j8lbl3`,                          alt: "Dawn" },
+  { src: `${CL}/abbott-logo_dw21vy`,                        alt: "Abbott" },
+  { src: `${CL}/adamjee-logo_hexyct`,                       alt: "Adamjee" },
+  { src: "/searle-logo-1.png",                               alt: "Searle" },
+  { src: `${CL}/Rizwanbeyg-logo_camfdd`,                    alt: "Rizwan Beyg" },
+  { src: `${CL}/FashionAsF-logo_icvd6x`,                    alt: "Fashion As F" },
+  { src: `${CL}/KCC-logo_svswys`,                           alt: "KCCI" },
+  { src: `${CL}/lucky-logo_o1rjlc`,                         alt: "Lucky Foods" },
+  { src: `${CL}/princesspolly-logo_v8lekb`,                 alt: "Princess Polly" },
+  { src: `${CL}/images-logo_gsthtl`,                        alt: "Images" },
 ];
 
 const row3 = [
-  { src: "/aristovie-logo.png",           alt: "Aristovie" },
-  { src: "/arts-logo.png",                alt: "Arts" },
-  { src: "/AVS-logo.png",                 alt: "AVS" },
-  { src: "/bmj-logo.png",                 alt: "BMJ" },
-  { src: "/bruj-logo.png",                alt: "Bruj" },
-  { src: "/gsthering-logo.jpg",           alt: "Gsthering" },
-  { src: "/icy-logo.webp",                alt: "Icy" },
-  { src: "/Kupgrade-logo.png",            alt: "Kupgrade" },
-  { src: "/kyousf-logo.webp",             alt: "Kyousf" },
+  { src: `${CL}/aristovie-logo_moynqq`,                     alt: "Aristovie" },
+  { src: "/arts-logo.png",                                   alt: "Arts Council" },
+  { src: `${CL}/AVS-logo_shizaq`,                           alt: "AVS" },
+  { src: `${CL}/bmj-logo_s0sbng`,                           alt: "BMJ" },
+  { src: `${CL}/Burj-logo_wg3nqw`,                          alt: "Burj" },
+  { src: `${CL}/gathering-logo_uv1ckk`,                     alt: "Gsthering" },
+  { src: "/icy-logo.webp",                                   alt: "Icy" },
+  { src: "/Kupgrade-logo.png",                               alt: "Kupgrade" },
+  { src: `${CL}/kyousuf-logo_d32ziq`,                       alt: "Kyousf" },
 ];
 
 const row4 = [
-  { src: "/Layers-Logo.png",              alt: "Layers" },
-  { src: "/manas-logo.webp",              alt: "Manas" },
-  { src: "/mgat-logo.png",                alt: "MGAT" },
-  { src: "/pie in the sky-logo.jpg",      alt: "Pie in the Sky" },
-  { src: "/elsevier-logo.webp",           alt: "Elsevier" },
-  { src: "/sulafah-logo.avif",            alt: "Sulafah" },
-  { src: "/uptodate-logo.png",            alt: "UpToDate" },
-  { src: "/zubair-shah-logo.png",         alt: "Zubair Shah" },
-  { src: "/zuellury-logo.jpg",            alt: "Zuellury" },
+  { src: "/Layers-Logo.png",                                 alt: "Layers" },
+  { src: `${CL}/manas-logo_xbji28`,                         alt: "Manas" },
+  { src: "/mgat-logo.png",                                   alt: "MGAT" },
+  { src: `${CL}/pieinthesky-logo_rzq0wv`,                   alt: "Pie in the Sky" },
+  { src: `${CL}/Elsevier-logo_h7ss0j`,                      alt: "Elsevier" },
+  { src: `${CL}/sulafah-logo_kz7w99`,                       alt: "Sulafah" },
+  { src: `${CL}/Uptodate-logo_f0hk4d`,                      alt: "UpToDate" },
+  { src: `${CL}/Zubair_Shah-logo_yyrm6f`,                   alt: "Zubair Shah" },
+  { src: `${CL}/Zellbury-logo_hoc9eu`,                      alt: "Zellbury" },
+  { src: `${CL}/Tapestry-Logo_plbuzy`,                      alt: "Tapestry" },
+  { src: `${CL}/Kate_Spade-NY-Logo_1_ylayfi`,               alt: "Kate Spade NY" },
+  { src: `${CL}/SAS-logo_jk9vue`,                           alt: "SAS" },
 ];
 
 const rows: { logos: typeof row1; duration: number }[] = [
@@ -137,15 +142,15 @@ export default function BrandGrid() {
 
 function LogoCard({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="group mx-2 shrink-0 w-40 h-18 bg-[#0c0c0c] border border-[#181818] hover:border-[#c9a96e]/25 flex items-center justify-center px-5 py-4 transition-all duration-300 overflow-hidden">
-      <div className="relative w-full h-10">
+    <div className="group mx-3 shrink-0 w-52 h-24 bg-[#0c0c0c] border border-[#181818] hover:border-[#c9a96e]/25 flex items-center justify-center px-6 py-4 transition-all duration-300 overflow-hidden">
+      <div className="relative w-full h-16">
         <Image
           src={src}
           alt={alt}
           fill
-          className="object-contain transition-all duration-300 group-hover:scale-105"
+          className="object-contain transition-all duration-300 group-hover:scale-105 brightness-75 group-hover:brightness-100"
           unoptimized
-          sizes="160px"
+          sizes="208px"
         />
       </div>
     </div>

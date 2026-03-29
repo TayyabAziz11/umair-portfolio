@@ -153,10 +153,10 @@ export default function Hero() {
               className="flex flex-wrap gap-4 mb-14"
             >
               <Link
-                href="/case-studies"
+                href="/portfolio"
                 className="group relative px-7 py-3.5 bg-[#c9a96e] text-[#080808] text-xs tracking-[0.2em] uppercase font-semibold overflow-hidden flex items-center gap-3 hover:gap-4 transition-all duration-300"
               >
-                <span className="relative z-10">View Case Studies</span>
+                <span className="relative z-10">View Portfolio</span>
                 <span className="relative z-10 group-hover:translate-x-1 transition-transform duration-300">→</span>
                 <span className="absolute inset-0 bg-[#e8d5b0] translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-400 ease-out" />
               </Link>

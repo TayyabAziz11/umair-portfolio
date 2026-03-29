@@ -4,7 +4,7 @@ import { services } from "@/lib/data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Skills",
   description: "Creative strategy, content systems, social media growth, campaign architecture, short-form video direction, and brand positioning.",
 };
 
@@ -46,7 +46,7 @@ export default function ServicesPage() {
             <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase">Capabilities</span>
           </div>
           <h1 className="font-display text-[clamp(3rem,7vw,7rem)] font-light text-[#f0ece4] leading-[0.95] tracking-[-0.03em] mb-8">
-            Services
+            Skills
           </h1>
           <p className="text-[#6b6b6b] text-lg max-w-xl leading-relaxed">
             A focused set of capabilities designed to build brand authority and drive measurable digital growth.

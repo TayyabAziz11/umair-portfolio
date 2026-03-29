@@ -11,62 +11,56 @@ export const siteConfig = {
   },
 };
 
+const CL = "https://res.cloudinary.com/dgsjtycgd/image/upload/f_auto,q_auto,w_300";
+
 export const brands = [
   // Fashion & Apparel
-  { name: "Espresso", slug: "espresso", sector: "Fashion", logo: "https://logo.clearbit.com/espresso.com.pk" },
-  { name: "Shahid Afridi", slug: "shahid-afridi", sector: "Fashion", logo: null },
-  { name: "AFM", slug: "afm", fullName: "Artistic Fabric Mills", sector: "Fashion", logo: null },
-  { name: "Klay", slug: "klay", sector: "Fashion", logo: null },
-  { name: "Coach", slug: "coach", sector: "Fashion", logo: "https://logo.clearbit.com/coach.com" },
-  { name: "Bonanza Satrangi", slug: "bonanza", sector: "Fashion", logo: "https://logo.clearbit.com/bonanzaonline.com" },
-  { name: "Gul Ahmed", slug: "gul-ahmed", sector: "Fashion", logo: "https://logo.clearbit.com/gulahmedtextile.com" },
-  { name: "Sapphire", slug: "sapphire", sector: "Fashion", logo: "https://logo.clearbit.com/sapphireonline.pk" },
-  { name: "Sana Safinaz", slug: "sana-safinaz", sector: "Fashion", logo: "https://logo.clearbit.com/sanasafinaz.com" },
-  { name: "Maria B", slug: "maria-b", sector: "Fashion", logo: "https://logo.clearbit.com/mariab.pk" },
-  { name: "Nishat Linen", slug: "nishat", sector: "Fashion", logo: "https://logo.clearbit.com/nishatlinen.com" },
-  { name: "Alkaram", slug: "alkaram", sector: "Fashion", logo: "https://logo.clearbit.com/alkaramstudio.com" },
-  { name: "Limelight", slug: "limelight", sector: "Fashion", logo: "https://logo.clearbit.com/limelight.pk" },
-  { name: "Khaadi", slug: "khaadi", sector: "Fashion", logo: "https://logo.clearbit.com/khaadi.com" },
+  { name: "Klay",           slug: "klay",           sector: "Fashion",    logo: `${CL}/klay-logo_o1p3mw` },
+  { name: "Manas",          slug: "manas",          sector: "Fashion",    logo: `${CL}/manas-logo_xbji28` },
+  { name: "Sulafah",        slug: "sulafah",        sector: "Fashion",    logo: `${CL}/sulafah-logo_kz7w99` },
+  { name: "Zubair Shah",    slug: "zubair-shah",    sector: "Fashion",    logo: `${CL}/Zubair_Shah-logo_yyrm6f` },
+  { name: "Shahid Afridi",  slug: "shahid-afridi",  sector: "Fashion",    logo: "/shahidafridi-store-logo.webp" },
+  { name: "AFM",            slug: "afm",            sector: "Fashion",    logo: `${CL}/afm-logo_eqsykw`,            fullName: "Artistic Fabric Mills" },
+  { name: "Coach",          slug: "coach",          sector: "Fashion",    logo: `${CL}/coach-logo_ojteie` },
+  { name: "Stylo",          slug: "stylo",          sector: "Fashion",    logo: `${CL}/Stylo-logo_gc3tym` },
+  { name: "Rizwan Beyg",    slug: "rizwan-beyg",    sector: "Fashion",    logo: `${CL}/Rizwanbeyg-logo_camfdd` },
+  { name: "Aristovie",      slug: "aristovie",      sector: "Fashion",    logo: `${CL}/aristovie-logo_moynqq` },
+  { name: "Princess Polly", slug: "princess-polly", sector: "Fashion",    logo: `${CL}/princesspolly-logo_v8lekb` },
+  { name: "Zellbury",       slug: "zellbury",       sector: "Fashion",    logo: `${CL}/Zellbury-logo_hoc9eu` },
+  { name: "Kyousf",         slug: "kyousf",         sector: "Fashion",    logo: `${CL}/kyousuf-logo_d32ziq` },
+  { name: "Icy",            slug: "icy",            sector: "Fashion",    logo: "/icy-logo.webp" },
+  { name: "Burj",           slug: "burj",           sector: "Fashion",    logo: `${CL}/Burj-logo_wg3nqw` },
+  { name: "Tapestry",       slug: "tapestry",       sector: "Fashion",    logo: `${CL}/Tapestry-Logo_plbuzy` },
+  { name: "Kate Spade NY",  slug: "kate-spade",     sector: "Fashion",    logo: `${CL}/Kate_Spade-NY-Logo_1_ylayfi` },
   // F&B / Hospitality
-  { name: "Chatterbox", slug: "chatterbox", sector: "F&B", logo: null },
-  { name: "Mocca", slug: "mocca", sector: "F&B", logo: null },
-  { name: "Gloria Jean's", slug: "gloria-jeans", sector: "F&B", logo: "https://logo.clearbit.com/gloriajeans.com" },
-  { name: "The Monal", slug: "the-monal", sector: "Hospitality", logo: null },
-  { name: "Salt'n Pepper", slug: "salt-n-pepper", sector: "F&B", logo: null },
-  { name: "Hardee's", slug: "hardees", sector: "F&B", logo: "https://logo.clearbit.com/hardees.com" },
-  // Media & Entertainment
-  { name: "Fabio Magazine", slug: "fabio", sector: "Media", logo: null },
-  { name: "Raftaar TV", slug: "raftaar", sector: "Media", logo: null },
-  { name: "HUM TV", slug: "hum-tv", sector: "Media", logo: "https://logo.clearbit.com/hum.tv" },
-  { name: "ARY Digital", slug: "ary", sector: "Media", logo: "https://logo.clearbit.com/ary.tv" },
-  { name: "GEO", slug: "geo", sector: "Media", logo: "https://logo.clearbit.com/geo.tv" },
-  { name: "Dawn", slug: "dawn", sector: "Media", logo: "https://logo.clearbit.com/dawn.com" },
-  // Healthcare
-  { name: "Dr Seema", slug: "dr-seema", sector: "Healthcare", logo: null },
-  { name: "Shifa International", slug: "shifa", sector: "Healthcare", logo: "https://logo.clearbit.com/shifa.com.pk" },
-  { name: "Oladoc", slug: "oladoc", sector: "Healthcare", logo: "https://logo.clearbit.com/oladoc.com" },
-  { name: "Sehat Kahani", slug: "sehat-kahani", sector: "Healthcare", logo: "https://logo.clearbit.com/sehatkahani.com" },
+  { name: "Espresso",       slug: "espresso",       sector: "F&B",        logo: "/espresso-logo.avif" },
+  { name: "Chatterbox",     slug: "chatterbox",     sector: "F&B",        logo: `${CL}/Chatterbox-logo_ewtj0v` },
+  { name: "Pie in the Sky", slug: "pits",           sector: "F&B",        logo: `${CL}/pieinthesky-logo_rzq0wv`,    fullName: "PITS" },
+  { name: "Lucky Foods",    slug: "lucky-foods",    sector: "F&B",        logo: `${CL}/lucky-logo_o1rjlc` },
+  // Healthcare & Pharma
+  { name: "Dr Seema",       slug: "dr-seema",       sector: "Healthcare", logo: `${CL}/Dr.SeemaSH-logo_bplthx` },
+  { name: "Abbott",         slug: "abbott",         sector: "Healthcare", logo: `${CL}/abbott-logo_dw21vy` },
+  { name: "Searle",         slug: "searle",         sector: "Healthcare", logo: "/searle-logo-1.png" },
+  { name: "BMJ",            slug: "bmj",            sector: "Healthcare", logo: `${CL}/bmj-logo_s0sbng` },
+  { name: "Elsevier",       slug: "elsevier",       sector: "Healthcare", logo: `${CL}/Elsevier-logo_h7ss0j` },
+  { name: "UpToDate",       slug: "uptodate",       sector: "Healthcare", logo: `${CL}/Uptodate-logo_f0hk4d` },
+  { name: "SAS",            slug: "sas",            sector: "Healthcare", logo: `${CL}/SAS-logo_jk9vue` },
+  // Media & Publishing
+  { name: "Dawn",           slug: "dawn",           sector: "Media",      logo: `${CL}/dawn-logo_j8lbl3` },
+  { name: "Images",         slug: "images",         sector: "Media",      logo: `${CL}/images-logo_gsthtl` },
+  { name: "KCCI",           slug: "kcci",           sector: "Media",      logo: `${CL}/KCC-logo_svswys` },
+  { name: "Fashion As F",   slug: "fashion-as-f",   sector: "Media",      logo: `${CL}/FashionAsF-logo_icvd6x` },
   // Arts & Culture
-  { name: "Canvas Gallery", slug: "canvas", sector: "Arts", logo: null },
-  { name: "Alliance Française", slug: "alliance", sector: "Arts", logo: "https://logo.clearbit.com/af-pakistan.org" },
-  { name: "The Second Floor", slug: "tsf", sector: "Culture", logo: null },
-  // Corporate / Tech
-  { name: "Delphi", slug: "delphi", sector: "Corporate", logo: "https://logo.clearbit.com/delphi.com" },
-  { name: "Telenor", slug: "telenor", sector: "Telecom", logo: "https://logo.clearbit.com/telenor.pk" },
-  { name: "Jazz", slug: "jazz", sector: "Telecom", logo: "https://logo.clearbit.com/jazz.com.pk" },
-  { name: "Bank Alfalah", slug: "bank-alfalah", sector: "Finance", logo: "https://logo.clearbit.com/bankalfalah.com" },
-  { name: "Meezan Bank", slug: "meezan", sector: "Finance", logo: "https://logo.clearbit.com/meezanbank.com" },
-  { name: "Systems Limited", slug: "systems", sector: "Tech", logo: "https://logo.clearbit.com/systemsltd.com" },
-  // Lifestyle & Beauty
-  { name: "Nabila's", slug: "nabilas", sector: "Beauty", logo: null },
-  { name: "Orin Paris", slug: "orin-paris", sector: "Beauty", logo: null },
-  { name: "Andaz Salon", slug: "andaz", sector: "Beauty", logo: null },
-  // Real Estate
-  { name: "Bahria Town", slug: "bahria", sector: "Real Estate", logo: "https://logo.clearbit.com/bahria.com.pk" },
-  { name: "DHA Pakistan", slug: "dha", sector: "Real Estate", logo: null },
-  // Sports / Other
-  { name: "PSL", slug: "psl", fullName: "Pakistan Super League", sector: "Sports", logo: "https://logo.clearbit.com/psl-t20.com" },
-  { name: "Sportsly", slug: "sportsly", sector: "Sports", logo: null },
+  { name: "Canvas Gallery", slug: "canvas",         sector: "Arts",       logo: "/canvas-galley-logo.jpg" },
+  { name: "Arts Council",   slug: "arts",           sector: "Arts",       logo: "/arts-logo.png" },
+  // Corporate & Business
+  { name: "Delphi",         slug: "delphi",         sector: "Corporate",  logo: `${CL}/Delphi-logo_kabldy` },
+  { name: "MGAT",           slug: "mgat",           sector: "Corporate",  logo: "/mgat-logo.png" },
+  { name: "AVS",            slug: "avs",            sector: "Corporate",  logo: `${CL}/AVS-logo_shizaq` },
+  { name: "Kupgrade",       slug: "kupgrade",       sector: "Corporate",  logo: "/Kupgrade-logo.png" },
+  { name: "Layers",         slug: "layers",         sector: "Corporate",  logo: "/Layers-Logo.png" },
+  { name: "Adamjee",        slug: "adamjee",        sector: "Corporate",  logo: `${CL}/adamjee-logo_hexyct` },
+  { name: "Gsthering",      slug: "gsthering",      sector: "Corporate",  logo: `${CL}/gathering-logo_uv1ckk` },
 ];
 
 export const metrics = [
@@ -271,6 +265,31 @@ export const caseStudies: CaseStudy[] = [
     featured: true,
     color: "#9b8b7a",
   },
+];
+
+export interface PortfolioItem {
+  id: string;
+  type: "image" | "video";
+  publicId: string; // Cloudinary public ID — replace with your actual IDs
+  title: string;
+  category: string;
+  aspect: "square" | "portrait" | "landscape";
+}
+
+export const portfolioItems: PortfolioItem[] = [
+  // Replace publicId values with your actual Cloudinary public IDs
+  { id: "1", type: "image", publicId: "samples/landscapes/nature-mountains", title: "Espresso — Brand Campaign", category: "Brand Campaign", aspect: "landscape" },
+  { id: "2", type: "video", publicId: "samples/elephants", title: "Chatterbox — Launch Film", category: "Short-Form Video", aspect: "portrait" },
+  { id: "3", type: "image", publicId: "samples/food/spices", title: "Fabio — Editorial Shoot", category: "Editorial", aspect: "square" },
+  { id: "4", type: "image", publicId: "samples/people/kitchen-bar", title: "Chatterbox — Campaign", category: "Campaign", aspect: "portrait" },
+  { id: "5", type: "image", publicId: "samples/landscapes/beach-boat", title: "The Monal — Content Series", category: "Content Strategy", aspect: "landscape" },
+  { id: "6", type: "video", publicId: "samples/sea-turtle", title: "Espresso — Showreel", category: "Showreel", aspect: "square" },
+  { id: "7", type: "image", publicId: "samples/balloons", title: "Fashion Editorial", category: "Fashion", aspect: "portrait" },
+  { id: "8", type: "image", publicId: "samples/bike", title: "Fabio — Street Style", category: "Editorial", aspect: "landscape" },
+  { id: "9", type: "image", publicId: "samples/cup-on-a-beach", title: "Espresso — Lifestyle", category: "Lifestyle", aspect: "square" },
+  { id: "10", type: "image", publicId: "samples/dessert-on-a-plate", title: "Chatterbox — Food Content", category: "F&B", aspect: "portrait" },
+  { id: "11", type: "image", publicId: "samples/cloudinary-group", title: "Campaign Reel", category: "Campaign", aspect: "landscape" },
+  { id: "12", type: "image", publicId: "samples/woman-on-a-football-field", title: "Delphi Campaign", category: "Corporate", aspect: "portrait" },
 ];
 
 export const timelineItems = [

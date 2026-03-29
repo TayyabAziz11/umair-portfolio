@@ -182,10 +182,10 @@ export default function AboutPage() {
                 Get In Touch →
               </Link>
               <Link
-                href="/case-studies"
+                href="/portfolio"
                 className="px-10 py-5 border border-[#3a3a3a] text-[#f0ece4] text-sm tracking-[0.15em] uppercase hover:border-[#c9a96e] hover:text-[#c9a96e] transition-all duration-300"
               >
-                View Case Studies
+                View Portfolio
               </Link>
             </div>
           </AnimatedSection>
