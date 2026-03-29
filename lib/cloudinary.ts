@@ -3,7 +3,7 @@
 // Server-side fetch functions live in lib/cloudinary-server.ts
 
 export const CLOUDINARY_CLOUD_NAME =
-  process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "demo";
+  process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "dgsjtycgd";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
