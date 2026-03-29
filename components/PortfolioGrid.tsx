@@ -253,7 +253,21 @@ export default function PortfolioGrid({ preview, shuffle: doShuffle, limit }: Po
   }
 
   // ── Static fallback ──
-  const staticItems = limit ? portfolioItems.slice(0, limit) : portfolioItems;
+  let staticItems = portfolioItems;
+
+  if (preview) {
+    const seenStatic: Record<string, { image: boolean; video: boolean }> = {};
+    staticItems = portfolioItems.filter((item) => {
+      const cat = item.category;
+      if (!seenStatic[cat]) seenStatic[cat] = { image: false, video: false };
+      if (item.type === "image" && !seenStatic[cat].image) { seenStatic[cat].image = true; return true; }
+      if (item.type === "video" && !seenStatic[cat].video) { seenStatic[cat].video = true; return true; }
+      return false;
+    });
+  }
+
+  if (doShuffle) staticItems = shuffle(staticItems as typeof portfolioItems);
+  if (limit) staticItems = staticItems.slice(0, limit);
   return (
     <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 lg:gap-4">
       {staticItems.map((item, i) => {
