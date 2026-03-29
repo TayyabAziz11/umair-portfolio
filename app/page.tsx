@@ -16,10 +16,7 @@ export default function Home() {
       {/* 2. Brands */}
       <BrandGrid />
 
-      {/* 3. Metrics */}
-      <MetricsSection />
-
-      {/* 4. Portfolio Preview */}
+      {/* 3. Portfolio Preview */}
       <section className="py-24 lg:py-40 border-t border-[#1e1e1e]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <AnimatedSection className="flex items-end justify-between mb-16 gap-8 flex-wrap">
@@ -45,6 +42,9 @@ export default function Home() {
           <PortfolioGrid preview />
         </div>
       </section>
+
+      {/* 4. Metrics */}
+      <MetricsSection />
 
       {/* 5. Services */}
       <section className="py-24 lg:py-40 border-t border-[#1e1e1e]">
