@@ -1,12 +1,33 @@
 import { Metadata } from "next";
-import { caseStudies } from "@/lib/data";
-import CaseStudyCard from "@/components/CaseStudyCard";
 import AnimatedSection from "@/components/AnimatedSection";
 
 export const metadata: Metadata = {
   title: "Case Studies",
-  description: "Deep dives into campaigns and content ecosystems that generated millions of organic views and measurable brand growth.",
+  description: "In-depth case studies on brand strategy, media production, and logo design.",
 };
+
+const pdfs = [
+  {
+    title: "AI Mass-Media Production",
+    subtitle: "Case Study E-Book",
+    description:
+      "A deep dive into how AI-driven content systems were used to build and scale mass-media production pipelines — covering strategy, workflow, and measurable outcomes across multiple brand campaigns.",
+    file: "/pdf/case-study-media-production.pdf",
+    label: "Media Production",
+    coverBg: "https://res.cloudinary.com/dgsjtycgd/image/upload/f_auto,q_auto,w_900/pdf-covers/case-study-media-production-cover",
+    pages: "E-Book",
+  },
+  {
+    title: "Logo Design",
+    subtitle: "Case Study E-Book",
+    description:
+      "An exploration of brand identity work — covering the creative strategy, visual language, and design process behind logos across fashion, F&B, corporate, and healthcare sectors.",
+    file: "/pdf/case-study-logo-design.pdf",
+    label: "Brand Identity",
+    coverBg: "https://res.cloudinary.com/dgsjtycgd/image/upload/f_auto,q_auto,w_900/pdf-covers/case-study-logo-design-cover",
+    pages: "E-Book",
+  },
+];
 
 export default function CaseStudiesPage() {
   return (
@@ -22,22 +43,64 @@ export default function CaseStudiesPage() {
             Case Studies
           </h1>
           <p className="text-[#6b6b6b] text-lg max-w-xl leading-relaxed">
-            Deep dives into campaigns and content ecosystems that generated millions of organic views and measurable brand growth.
+            In-depth breakdowns of brand strategy, content systems, and creative direction — available as downloadable e-books.
           </p>
         </AnimatedSection>
       </div>
 
-      {/* Case studies grid */}
+      {/* PDF Cards — side by side, A4 portrait */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-[#1e1e1e]">
-          {caseStudies.map((study, i) => (
-            <div key={study.slug} className={study.featured && i === 0 ? "lg:col-span-2" : ""}>
-              <CaseStudyCard
-                study={study}
-                index={i}
-                variant={study.featured && i === 0 ? "large" : "default"}
-              />
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {pdfs.map((pdf, i) => (
+            <AnimatedSection key={pdf.file} delay={i * 0.15}>
+              <a
+                href={pdf.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block relative overflow-hidden"
+                style={{ aspectRatio: "1 / 1.414" }}
+              >
+                {/* Background cover image — full visibility */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 group-hover:scale-[1.04]"
+                  style={{ backgroundImage: `url(${pdf.coverBg})` }}
+                />
+
+                {/* Subtle gradient only at very bottom for text */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/90 via-[#080808]/20 to-transparent" />
+
+                {/* Top badges */}
+                <div className="absolute top-6 left-6 flex items-center gap-2">
+                  <span className="px-3 py-1 bg-[#080808]/60 border border-[#c9a96e]/50 text-[#c9a96e] text-[10px] tracking-[0.3em] uppercase backdrop-blur-sm">
+                    {pdf.label}
+                  </span>
+                  <span className="px-3 py-1 bg-[#080808]/60 border border-[#3a3a3a] text-[#aaa] text-[10px] tracking-[0.2em] uppercase backdrop-blur-sm flex items-center gap-1.5">
+                    <svg width="9" height="11" viewBox="0 0 10 12" fill="currentColor">
+                      <path d="M6 0H1C.45 0 0 .45 0 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V4L6 0zm0 1.5L8.5 4H6V1.5zM1 11V1h4v4h4v6H1z"/>
+                    </svg>
+                    PDF
+                  </span>
+                </div>
+
+                {/* Bottom content */}
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <p className="text-[#c9a96e]/80 text-[10px] tracking-[0.25em] uppercase mb-2">{pdf.pages}</p>
+                  <h2 className="font-display text-2xl lg:text-3xl font-light text-[#f0ece4] leading-tight tracking-[-0.02em] mb-2 group-hover:text-[#e8d5b0] transition-colors duration-500">
+                    {pdf.title}
+                  </h2>
+                  <p className="text-[#9a9a9a] text-xs leading-relaxed mb-5 line-clamp-2">
+                    {pdf.description}
+                  </p>
+                  <div className="flex items-center gap-3 px-5 py-2.5 bg-[#c9a96e] text-[#080808] text-[10px] tracking-[0.2em] uppercase font-medium w-fit group-hover:bg-[#e8d5b0] transition-colors duration-300">
+                    Open PDF
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  </div>
+                </div>
+
+                {/* Corner decoration */}
+                <div className="absolute top-6 right-6 w-12 h-12 border border-[#c9a96e]/15 group-hover:border-[#c9a96e]/40 transition-colors duration-500" />
+              </a>
+            </AnimatedSection>
           ))}
         </div>
       </div>

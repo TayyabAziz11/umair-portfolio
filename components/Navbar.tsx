@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -9,7 +10,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/brands", label: "Brands" },
-  { href: "/services", label: "Skills" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -53,9 +54,13 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-3">
-            <div className="w-8 h-8 border border-[#c9a96e] flex items-center justify-center">
-              <span className="text-[#c9a96e] text-xs font-bold tracking-widest">U</span>
-            </div>
+            <Image
+              src="/umair-logo.png"
+              alt="Umair"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
             <span className="text-[#f0ece4] text-sm tracking-[0.2em] uppercase font-medium group-hover:text-[#c9a96e] transition-colors">
               Umair
             </span>
@@ -76,12 +81,21 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="ml-4 px-5 py-2 border border-[#c9a96e] text-[#c9a96e] text-xs tracking-[0.15em] uppercase hover:bg-[#c9a96e] hover:text-[#080808] transition-all duration-300"
-            >
-              Let&apos;s Talk
-            </Link>
+            <div className="ml-4 flex items-center gap-3">
+              <div className="flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#22c55e]" />
+                </span>
+                <span className="text-[#4a4a4a] text-[10px] tracking-[0.2em] uppercase hidden xl:inline">Available</span>
+              </div>
+              <Link
+                href="/contact"
+                className="px-5 py-2 border border-[#c9a96e] text-[#c9a96e] text-xs tracking-[0.15em] uppercase hover:bg-[#c9a96e] hover:text-[#080808] transition-all duration-300"
+              >
+                Let&apos;s Talk
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Hamburger */}

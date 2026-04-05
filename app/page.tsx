@@ -5,7 +5,6 @@ import VideoShowcase from "@/components/VideoShowcase";
 import AnimatedSection from "@/components/AnimatedSection";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import Link from "next/link";
-import { services } from "@/lib/data";
 
 export default function Home() {
   return (
@@ -46,60 +45,7 @@ export default function Home() {
       {/* 4. Metrics */}
       <MetricsSection />
 
-      {/* 5. Services */}
-      <section className="py-24 lg:py-40 border-t border-[#1e1e1e]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <AnimatedSection className="mb-16">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-8 h-px bg-[#c9a96e]" />
-              <span className="text-[#c9a96e] text-xs tracking-[0.3em] uppercase">What I Do</span>
-            </div>
-            <h2 className="font-display text-[clamp(2.5rem,5vw,5rem)] font-light text-[#f0ece4] leading-tight tracking-[-0.02em] max-w-2xl">
-              Skills built for <span className="gradient-accent">real results</span>
-            </h2>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1e1e1e]">
-            {services.map((service, i) => (
-              <AnimatedSection key={service.title} delay={i * 0.08}>
-                <div className="group bg-[#080808] hover:bg-[#0d0d0d] transition-all duration-500 p-10 h-full card-glow">
-                  <p className="text-[#c9a96e]/50 text-2xl mb-8 group-hover:text-[#c9a96e] transition-colors duration-300">
-                    {service.icon}
-                  </p>
-                  <h3 className="text-[#f0ece4] text-lg font-medium tracking-tight mb-4 group-hover:text-[#e8d5b0] transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-[#6b6b6b] text-sm leading-relaxed mb-6 group-hover:text-[#8a8a8a] transition-colors duration-300">
-                    {service.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {service.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[#5a5a5a] text-[10px] tracking-[0.15em] uppercase border border-[#1e1e1e] group-hover:border-[#2a2a2a] px-2.5 py-1 transition-colors"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <AnimatedSection delay={0.3} className="mt-10 text-center">
-            <Link
-              href="/services"
-              className="inline-flex items-center gap-3 text-[#6b6b6b] hover:text-[#c9a96e] transition-colors text-sm tracking-[0.2em] uppercase"
-            >
-              View All Skills
-              <span>→</span>
-            </Link>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* 6. Video Showreel */}
+      {/* 5. Video Showreel */}
       <VideoShowcase />
 
       {/* 7. About Preview */}

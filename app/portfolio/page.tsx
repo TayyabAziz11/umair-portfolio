@@ -30,7 +30,7 @@ export default function PortfolioPage() {
       {/* Masonry Grid */}
       <section className="pb-24 lg:pb-40 border-t border-[#1e1e1e] pt-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <PortfolioGrid shuffle />
+          <PortfolioGrid shuffle showFilters />
         </div>
       </section>
     </>

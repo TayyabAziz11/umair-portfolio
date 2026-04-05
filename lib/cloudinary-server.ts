@@ -18,7 +18,12 @@ export const BRAND_FOLDERS = [
   "Manas",
   "PITS",
   "Sulafah",
-  "Zubair Shah",
+  "Chatterbox",
+  "Delphi",
+  "Shahid Afridi Store",
+  "Salman Farms Milk",
+  "AFM",
+  "Ai Content",
 ];
 
 // ─── Fetch all portfolio assets from all brand folders ────────────────────────

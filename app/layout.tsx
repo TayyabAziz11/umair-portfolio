@@ -16,6 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/umair-logo.png",
+    shortcut: "/umair-logo.png",
+    apple: "/umair-logo.png",
+  },
   title: {
     default: "Umair — Creative Strategy & Digital Growth",
     template: "%s | Umair",

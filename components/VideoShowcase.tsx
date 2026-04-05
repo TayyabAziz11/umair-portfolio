@@ -7,9 +7,9 @@ import { CLOUDINARY_CLOUD_NAME } from "@/lib/cloudinary";
 
 // 3 showcase videos — one from each key brand
 const SHOWCASE_VIDEOS = [
-  { publicId: "55_ve9qbs",       brand: "Espresso",   label: "Lifestyle Reel" },
-  { publicId: "01_jsy1dd",       brand: "Klay",       label: "Fashion Film" },
-  { publicId: "Kolapurix3_cbu34q", brand: "Sulafah",   label: "Campaign Reel" },
+  { publicId: "55_ve9qbs",         brand: "Espresso", label: "Lifestyle Reel",  views: "5.2M+" },
+  { publicId: "01_jsy1dd",         brand: "Klay",     label: "Fashion Film",    views: "18 Reels" },
+  { publicId: "Kolapurix3_cbu34q", brand: "Sulafah",  label: "Campaign Reel",   views: "Featured" },
 ];
 
 const CL = "https://res.cloudinary.com/dgsjtycgd/image/upload/f_auto,q_auto,w_300";
@@ -17,9 +17,9 @@ const CL = "https://res.cloudinary.com/dgsjtycgd/image/upload/f_auto,q_auto,w_30
 // Brand stats strip
 const BRAND_STATS = [
   { name: "Espresso",   logo: "/espresso-logo.avif",                    stat: "5.2M+",  label: "Organic Views" },
-  { name: "Chatterbox", logo: `${CL}/Chatterbox-logo_ewtj0v`,           stat: "3.9M+",  label: "Viral Views" },
-  { name: "Manas",      logo: `${CL}/manas-logo_xbji28`,                stat: "64",     label: "Pieces Created" },
-  { name: "Klay",       logo: `${CL}/klay-logo_o1p3mw`,                 stat: "18",     label: "Reels Directed" },
+  { name: "Chatterbox", logo: `${CL}/Chatterbox-logo_qxylct`,           stat: "3.9M+",  label: "Viral Views" },
+  { name: "Manas",      logo: `${CL}/manas-logo_v0m7jr`,                stat: "64",     label: "Pieces Created" },
+  { name: "Klay",       logo: `${CL}/klay-logo_bfslag`,                 stat: "18",     label: "Reels Directed" },
 ];
 
 function videoUrl(publicId: string) {
@@ -64,7 +64,14 @@ export default function VideoShowcase() {
                 />
                 {/* Gradient overlay at bottom */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 via-transparent to-transparent" />
-                {/* Label */}
+                {/* Top right — view count badge */}
+                <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-[#080808]/70 backdrop-blur-sm border border-[#2a2a2a] px-3 py-1.5">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" className="text-[#c9a96e]">
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                  </svg>
+                  <span className="text-[#c9a96e] text-[10px] tracking-[0.15em] font-medium">{v.views}</span>
+                </div>
+                {/* Bottom label */}
                 <div className="absolute bottom-5 left-5">
                   <p className="text-[#c9a96e] text-[9px] tracking-[0.25em] uppercase mb-1">{v.brand}</p>
                   <p className="text-[#f0ece4] text-sm font-medium">{v.label}</p>
