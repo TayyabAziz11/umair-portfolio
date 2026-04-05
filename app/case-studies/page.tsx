@@ -12,7 +12,7 @@ const pdfs = [
     subtitle: "Case Study E-Book",
     description:
       "A deep dive into how AI-driven content systems were used to build and scale mass-media production pipelines — covering strategy, workflow, and measurable outcomes across multiple brand campaigns.",
-    file: "https://res.cloudinary.com/dgsjtycgd/raw/upload/case-studies/case-study-media-production.pdf",
+    file: "https://docs.google.com/viewer?url=https://res.cloudinary.com/dgsjtycgd/raw/upload/case-studies/case-study-media-production.pdf&embedded=false",
     label: "Media Production",
     coverBg: "https://res.cloudinary.com/dgsjtycgd/image/upload/f_auto,q_auto,w_900/pdf-covers/case-study-media-production-cover",
     pages: "E-Book",
@@ -22,7 +22,7 @@ const pdfs = [
     subtitle: "Case Study E-Book",
     description:
       "An exploration of brand identity work — covering the creative strategy, visual language, and design process behind logos across fashion, F&B, corporate, and healthcare sectors.",
-    file: "https://res.cloudinary.com/dgsjtycgd/raw/upload/case-studies/case-study-logo-design.pdf",
+    file: "https://docs.google.com/viewer?url=https://res.cloudinary.com/dgsjtycgd/raw/upload/case-studies/case-study-logo-design.pdf&embedded=false",
     label: "Brand Identity",
     coverBg: "https://res.cloudinary.com/dgsjtycgd/image/upload/f_auto,q_auto,w_900/pdf-covers/case-study-logo-design-cover",
     pages: "E-Book",
