@@ -42,3 +42,4 @@ next-env.d.ts
 
 # PDFs (too large for GitHub — deploy via Vercel CLI directly)
 /pdf/
+.env*.local
