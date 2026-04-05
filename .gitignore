@@ -40,6 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# PDFs (too large for GitHub — host separately)
+# PDFs (too large for GitHub — deploy via Vercel CLI directly)
 /pdf/
-/public/pdf/
